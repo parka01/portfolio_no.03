@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WINDOW WORLD</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div id="draggable">
+      <div class="box-esc">
+        <div class="keycap esc">ESC</div>
+      </div>
+      <div class="box-enter">
+        <div class="keycap-enter">Enter</div>
+      </div>
+      <div class="box-arrows">
+        <div>
+          <div class="keycap left">←</div>
+        </div>
+        <div class="keycap-vertical">
+          <div class="keycap up">↑</div>
+          <div class="keycap down">↓</div>
+        </div>
+        <div>
+          <div class="keycap right">→</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="wrap-main">
+      <div class="main">
+        <div class="txt-title">
+          <span> ※ 비밀 웹사이트 ※ </span>
+        </div>
+        <p>비밀리에 운영되고 있는 웹사이트에 접속하신 것을 환영합니다.</p>
+
+        <p>
+          * 접속하려면 비밀 접속 코드를 입력한 후 Enter ↲ 키를 누르십시오.
+          <br />
+          * 뒤로가기는 불가합니다.
+        </p>
+        <div class="align-center">
+          <input
+            id="password-input"
+            type="password"
+            placeholder="비밀번호를 입력하세요."
+            autofocus
+          />
+        </div>
+      </div>
+      <div class="modal"></div>
+      <div class="popup">
+        <div class="header">승인되지 않은 사용자!</div>
+        <div class="popup-content">
+          승인되지 않은 사용자입니다. 현재창을 3분 이내로 닫지 않으면 사용중인
+          기기는 폭파됩니다.💥
+        </div>
+      </div>
+    </div>
+
+    <div id="wrap-footer">
+      <div class="footer">
+        <p>
+          * 웹사이트를 사용하려면 키보드 방향키 ←, →, ↑, ↓를 통해 페이지를
+          이동할 수 있습니다.
+        </p>
+        <p>* ESC 를 누르면 홈으로 돌아갑니다.</p>
+        <p class="warning">
+          *** 이 웹사이트에 접근할 수 있는 명단은 철저히 관리되고 있으며 해당
+          내용을 외부에 유출할 시 징역 20년 이하 벌금 2000만원 이하의 처벌대상이
+          되며, 기억삭제의 대상이 됩니다.***
+        </p>
+      </div>
+    </div>
+    <script src="./js/jquery-4.0.0.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,307 @@
+@font-face {
+  font-family: dos;
+  src: url(../fonts/DOSIyagiBoldface.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: consolas, '궁서체';
+  background-color: #0000aa;
+  font-size: 25px;
+  line-height: 33px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+span {
+  color: #0000aa;
+  background-color: #fff;
+  padding-inline: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.bg-popup {
+  overflow: hidden;
+  background: #0000008f;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(1px);
+}
+
+.popup {
+  background: #b6b6b6;
+  border: solid 4px #fff;
+  border-style: ridge;
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  top: calc(50% - 100px);
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  font-family: dos;
+
+  .header {
+    box-sizing: border-box;
+    display: flex;
+    background: #0000aa;
+    width: 100%;
+    height: 50px;
+    border-style: ridge;
+    text-align: center;
+    outline: outset 4px #fff;
+    padding: 8px;
+    font-family: dos;
+  }
+
+  .popup-content {
+    color: #000;
+    font-family: dos;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+  }
+}
+
+#draggable {
+  width: 310px;
+  display: flex;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .box-esc {
+    width: 16%;
+  }
+
+  .box-enter {
+    width: 31%;
+  }
+
+  .box-arrows {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    li {
+      width: 33%;
+    }
+  }
+
+  .keycap-vertical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .keycap {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(grey 1%, #adadad 80%, #838383);
+    outline: solid 1px #00000070;
+    border: solid 2px #979797;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    align-content: center;
+  }
+
+  .keycap:hover,
+  .keycap-enter:hover {
+    filter: brightness(1.3);
+  }
+
+  .keycap-enter {
+    width: 100px;
+    height: 50px;
+    background: radial-gradient(grey 1%, #adadad 80%, #838383);
+    outline: solid 1px #00000070;
+    border: solid 2px #979797;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    align-content: center;
+  }
+}
+
+#wrap-main {
+  padding: 200px 0px 100px 0px;
+  position: relative;
+  /* popup position */
+}
+
+.cat-main {
+  font-family: consolas, dos;
+}
+
+#wrap-security-page {
+  padding: 200px 0px 100px 0px;
+}
+
+#wrap-cat-page,
+#wrap-tech-page,
+#wrap-med-page {
+  padding-block: 100px;
+}
+
+.cat-page {
+  max-width: 1320px;
+  margin: auto;
+
+  .list-kidnapped-cat {
+    li {
+      margin-bottom: 100px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 30px;
+  }
+
+  .cat-title {
+    margin-bottom: 20px;
+  }
+
+  .vertical-frame {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+        display: block;
+        border: ridge 10px #d1d1d1;
+      }
+    }
+  }
+
+  .frame {
+    display: flex;
+    width: 30%;
+    border: ridge 10px #d1d1d1;
+    flex-direction: column;
+    height: 100%;
+    aspect-ratio: 1;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .voice {
+      filter: sepia(0.5);
+      object-position: 23% 50%;
+    }
+
+    .reptile {
+      object-position: right top;
+    }
+  }
+
+  .box-split {
+    display: flex;
+    justify-content: space-between;
+
+    .split-txt {
+      width: 68%;
+    }
+  }
+}
+
+.main {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.txt-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+input {
+  caret-color: #fff;
+  background-color: grey;
+  height: 40px;
+  caret-shape: block;
+  font-size: 20px;
+  text-align: center;
+  margin-block: 50px;
+  font-family: consolas, dos;
+  padding-inline: 20px;
+}
+
+input::placeholder {
+  color: #fff;
+  font-family: consolas, dos;
+  text-align: center;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.footer {
+  max-width: 1320px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.menu01,
+.menu02,
+.menu03 {
+  font-family: dos;
+}
+
+.selected {
+  background: #fff;
+  color: #0000aa;
+  font-family: dos;
+
+  b {
+    background: #fff;
+    color: #0000aa;
+  }
+}
+
+.warning {
+  font-size: 12px;
+  text-align: right;
+  margin-top: 30px;
+}
