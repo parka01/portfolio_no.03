@@ -6,9 +6,8 @@ $(function () {
   const verifiedMed = document.getElementById('wrap-med-page');
   let menuValue = 1;
 
-  function locate(event) {
+  function locate() {
     if (event.key === 'Enter') {
-      console.log('엔터누름');
       if (menuValue === 1) {
         $(location).attr('href', './pages/secret-cat.html');
       } else if (menuValue === 2) {
