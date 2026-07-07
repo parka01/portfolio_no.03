@@ -1,20 +1,20 @@
 $(function () {
   const pageType = document.body.getAttribute('id');
-  const verified = document.getElementById('wrap_security_page');
-  const verifiedCat = document.getElementById('wrap_cat_page');
-  const verifiedTech = document.getElementById('wrap_tech_page');
-  const verifiedMed = document.getElementById('wrap_med_page');
+  const verified = document.getElementById('wrap-security-page');
+  const verifiedCat = document.getElementById('wrap-cat-page');
+  const verifiedTech = document.getElementById('wrap-tech-page');
+  const verifiedMed = document.getElementById('wrap-med-page');
   let menuValue = 1;
 
   function locate(event) {
     if (event.key === 'Enter') {
       console.log('엔터누름');
       if (menuValue === 1) {
-        $(location).attr('href', './pages/secret_cat.html');
+        $(location).attr('href', './pages/secret-cat.html');
       } else if (menuValue === 2) {
-        $(location).attr('href', './pages/secret_tech.html');
+        $(location).attr('href', './pages/secret-tech.html');
       } else if (menuValue === 3) {
-        $(location).attr('href', './pages/secret_med.html');
+        $(location).attr('href', './pages/secret-med.html');
       } else {
       }
     }
@@ -48,14 +48,14 @@ $(function () {
   }
 
   $('.popup').hide();
-  $('#password_input').on('keydown', function (event) {
+  $('#password-input').on('keydown', function (event) {
     const value = event.target.value;
     if (event.key === 'Enter') {
       if (value == 4321) {
         window.location.replace('./pages/mainpage.html');
       } else {
         // alert("비정상적인 접근 시도 감지");
-        $('.modal').addClass('bg_popup');
+        $('.modal').addClass('bg-popup');
         $('.popup').show();
       }
     }
