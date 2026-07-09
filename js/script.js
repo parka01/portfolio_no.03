@@ -17,7 +17,9 @@ $(function () {
       } else {
       }
     }
+
   }
+
   function onSelected() {
     $('.menu01, .menu02, .menu03').removeClass('selected');
     if (menuValue === 1) {
@@ -28,6 +30,7 @@ $(function () {
       $('.menu03').addClass('selected');
     }
   }
+
   function arrowDown() {
     if (menuValue === 1) {
       menuValue = 2;
@@ -37,6 +40,7 @@ $(function () {
       menuValue = 1;
     }
   }
+
   function arrowUp() {
     if (menuValue === 1) menuValue = 3;
     else if (menuValue === 2) {
@@ -47,6 +51,7 @@ $(function () {
   }
 
   $('.popup').hide();
+
   $('#password-input').on('keydown', function (event) {
     const value = event.target.value;
     if (event.key === 'Enter') {
@@ -58,7 +63,20 @@ $(function () {
         $('.popup').show();
       }
     }
+
   });
+
+  $('.keycap-enter').click(function () {
+    const value = $('#password-input').val();
+
+    if (value === '4321') {
+      window.location.replace('./pages/mainpage.html');
+    } else {
+      $('.modal').addClass('bg-popup');
+      $('.popup').show();
+    }
+  });
+  
   window.addEventListener('keyup', (event) => {
     if (event.key === 'Escape') {
       window.location.replace('./index.html');
@@ -90,6 +108,18 @@ $(function () {
     $('.keycap.esc').click(function () {
       window.location.replace('./index.html');
     });
+    $('.keycap-enter').click(
+      function () {
+        if (menuValue === 1) {
+          $(location).attr('href', './pages/secret-cat.html');
+        } else if (menuValue === 2) {
+          $(location).attr('href', './pages/secret-tech.html');
+        } else if (menuValue === 3) {
+          $(location).attr('href', './pages/secret-med.html');
+        } else {
+        }
+      }
+    );
   } else if (verifiedCat || verifiedTech || verifiedMed) {
   } else {
     console.log('Please verify your identity.');
